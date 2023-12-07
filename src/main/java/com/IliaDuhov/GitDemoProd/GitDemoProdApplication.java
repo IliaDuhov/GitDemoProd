@@ -9,7 +9,7 @@ public class GitDemoProdApplication {
 
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		System.out.println("Hello, Git");
+		System.out.println("Hello, GIT!!!");
 		context.getBean(Quoter.class).sayQuote();
 	}
 
