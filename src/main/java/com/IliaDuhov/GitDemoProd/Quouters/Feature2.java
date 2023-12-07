@@ -1,5 +1,7 @@
 package com.IliaDuhov.GitDemoProd.Quouters;
 
+import java.util.Objects;
+
 public class Feature2 {
     private String name;
     private long id;
@@ -19,5 +21,17 @@ public class Feature2 {
 
     public long getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Feature2 feature2)) return false;
+        return getId() == feature2.getId() && Objects.equals(getName(), feature2.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getId());
     }
 }
