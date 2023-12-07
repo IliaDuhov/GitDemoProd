@@ -14,6 +14,7 @@ public class InjectRandomIntAnnotationPostProcessor implements BeanPostProcessor
         for(Field field: fields){
             InjectRandomInt annotation = field.getAnnotation(InjectRandomInt.class);
             if(annotation != null){
+                System.out.println(field);
                 int min = annotation.min();
                 int max = annotation.max();
                 Random random = new Random();
